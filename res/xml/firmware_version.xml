@@ -21,6 +21,11 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/aris_logo"
+        android:key="aris_logo"
+        android:selectable="false" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
@@ -29,6 +34,15 @@
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
+
+    <!-- ArisGo version -->
+    <Preference
+         android:key="aris_version"
+         android:title="@string/rom_version_title"
+         android:selectable="false"
+         android:summary="@string/summary_placeholder"
+         settings:enableCopying="true"
+         settings:controller="com.android.settings.deviceinfo.firmwareversion.ROMVersionPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
